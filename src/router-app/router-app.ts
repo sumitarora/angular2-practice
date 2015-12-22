@@ -28,8 +28,9 @@ import {Contact} from './contact';
   <div>
     <nav>
       <ul>
-        <li><a [routerLink]="['./About']">About</a></li>
-        <li><a [routerLink]="['./Contact']">Contact</a></li>
+        <li><a [routerLink]="['/Start/StartMain']" class="link">Start</a></li>
+        <li><a [routerLink]="['/About']">About</a></li>
+        <li><a [routerLink]="['/Contact']">Contact</a></li>
       </ul>
     </nav>
     <main>

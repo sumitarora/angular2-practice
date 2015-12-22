@@ -22,7 +22,7 @@ import {StartMain} from './start-main';
   <div>
     Start Component
     <li><a [routerLink]="['./StartMain']">StartMain</a></li>
-    <li><a [routerLink]="['./StartChild']">StartChild</a></li>    
+    <li><a [routerLink]="['./StartChild']">StartChild</a></li>
     <router-outlet></router-outlet>
   </div>
   `
