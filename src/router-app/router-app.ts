@@ -1,15 +1,21 @@
-import {Component, View} from 'angular2/core';
-import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouteConfig, Location, RouterLink,
-RouterOutlet}
-from 'angular2/router';
-
+import {
+  Component,
+  View
+} from 'angular2/core';
+import {
+  ROUTER_DIRECTIVES,
+  RouteConfig,
+  RouterLink,
+  RouterOutlet
+} from 'angular2/router';
 
 import {Start} from './start';
 import {About} from './about';
 import {Contact} from './contact';
 
 @RouteConfig([
-  { path: '/', component: Start, as: 'Start'},
+  { path: '/', redirectTo: ['About']},
+  { path: '/start/...', component: Start, as: 'Start'},
   { path: '/about', component: About, as: 'About'},
   { path: '/contact', component: Contact, as: 'Contact'}
 ])
@@ -22,9 +28,8 @@ import {Contact} from './contact';
   <div>
     <nav>
       <ul>
-        <li><a router-link="start">Start</a></li>
-        <li><a router-link="about">About</a></li>
-        <li><a router-link="contact">Contact</a></li>
+        <li><a [routerLink]="['./About']">About</a></li>
+        <li><a [routerLink]="['./Contact']">Contact</a></li>
       </ul>
     </nav>
     <main>
