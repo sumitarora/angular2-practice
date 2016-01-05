@@ -22,7 +22,7 @@ import {TodoService, TodoModel} from './todo-service';
   `
 })
 export class TodoInput {
-  todoModel:TodoModel = new TodoModel();
+  todoModel: TodoModel = new TodoModel();
 
   constructor(
     public todoService: TodoService

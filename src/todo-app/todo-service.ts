@@ -5,7 +5,7 @@ export class TodoModel {
     ) {}
 
     toggle() {
-      if(this.status === 'started') {
+      if (this.status === 'started') {
         this.status = 'completed';
       } else {
         this.status = 'started';
